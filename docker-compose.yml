@@ -1,0 +1,12 @@
+services:
+  ignition:
+    image: inductiveautomation/ignition:8.3.8
+    ports:
+      - "9090:8088"
+    volumes:
+      - ignition-data:/usr/local/bin/ignition/data
+    environment:
+      - GATEWAY_ADMIN_PASSWORD=password
+
+volumes:
+  ignition-data:
